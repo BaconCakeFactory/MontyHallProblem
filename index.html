@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" href="https://david-hermann.com/wp-content/uploads/2021/09/cropped-iconnormred-32x32.png" sizes="32x32">
+        <script src="main.js"></script>
+        <title>Das Ziegenproblem</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body onload="setStats()">
+        <h2>Monty Hall Problem</h2>
+        <div id="outer_wrapper">
+            <div class="wrapper">
+                <h3 id="instructions" >Wähle ein Tor aus, um eine Runde zu beginnen.  <i>Auto?<input type="checkbox" id="auto_run" onchange="autoRun()"></i></h3>
+                <div id="door_wrapper" class="inner_wrapper">
+                    <div class="door available" id="door1" onclick="clickDoorWrapper(this)"><p>1</p></div>
+                    <div class="door available" id="door2" onclick="clickDoorWrapper(this)"><p>2</p></div>
+                    <div class="door available" id="door3" onclick="clickDoorWrapper(this)"><p>3</p></div>
+                </div>
+                <h3>Ergebnisse:</h3>
+                <div id="stats_wrapper" class="inner_wrapper">
+                    <div class="stats">
+                        <h4>Mit Tor wechseln …</h4>
+                        <div class="stat" id="swins">d</div>
+                        <div class="stat" id="slosses">g</div>
+                        <div class="stat" id="srate">c</div>
+                    </div>
+                    <div class="stats">
+                        <h4>Ohne Tor wechseln …</h4>
+                        <div class="stat" id="wins">d</div>
+                        <div class="stat" id="losses">g</div>
+                        <div class="stat" id="rate">c</div>
+                    </div>    
+                </div>
+                <div class="inner_wrapper">
+                    <div class="stats">
+                        <div class="stat" id="conclusion">c</div>
+                    </div>
+                </div>
+                <h3>Spielverlauf:</h3>
+                <div id="game_wrapper" class="inner_wrapper">
+
+                </div>
+                <a href='https://de.freepik.com/vektoren/rahmen'>Rahmen Vektor erstellt von upklyak - de.freepik.com</a>
+            </div>
+            <div class="wrapper">
+                <h3>Das Ziegenproblem</h3>
+                <a href="https://www.sofatutor.com/mathematik/videos/ziegen-problem">Quelle: Sofatutor.com</a>
+                <p>
+                    Hinter dem <b>Ziegenproblem</b> (auch Drei-Türen-Problem, Monty-Hall-Problem oder Monty-Hall-Dilemma) verbirgt sich eine bekannte Fragestellung aus der Wahrscheinlichkeitsrechnung. Dabei darf der Kandidat in einer Show <b>eines von drei Toren auswählen</b>. Hinter einem der Tore ist ein Preis, zum Beispiel ein Auto, hinter den anderen beiden befindet sich jeweils eine Ziege. Daher auch der Name Ziegenproblem. Nachdem sich der Kandidat für ein Tor entschieden hat, öffnet der Moderator eines der beiden anderen Tore, hinter dem eine Ziege steht. Im Anschluss hat der Kandidat erneut die Wahl: Er kann bei dem Tor <b>bleiben</b>, das er ursprünglich ausgewählt hatte, oder er kann zu dem verbleibenden Tor <b>wechseln</b>. Wir werden untersuchen, welche Strategie aus mathematischer Sicht die höhere Gewinnchance beim Ziegenproblem hat.
+                </p>
+                <p>
+                    Die häufige Vermutung, dass der Kandidat bei der zweiten Auswahl in jedem Fall eine Gewinnwahrscheinlichkeit von 5050% hat, ist <b>falsch</b>. Er hat hier zwar die Wahl zwischen zwei Toren, die Wahrscheinlichkeit dafür, dass sich das Auto dahinter verbirgt, ist aber aufgrund des Spielaufbaus für die beiden Tore nicht identisch.
+                </p>
+                <p>
+                    Bei der <b>ersten Wahl</b> des Kandidaten zwischen drei Toren ergibt sich eine Wahrscheinlichkeit von 1/3 für den Gewinn und von 2/3 für eine Ziege, da hinter einem der drei Tore der Gewinn, hinter den anderen beiden Ziegen stehen. Diese Wahrscheinlichkeiten bleiben auch nach dem Öffnen eines Tores durch den Moderator erhalten.
+                </p>
+            </div>
+        </div>
+    </body>
+</html>

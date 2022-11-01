@@ -1,0 +1,102 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+i {
+    color: yellow;
+    -webkit-text-stroke: 0.01em black;
+    float: right;
+}
+p {
+    line-height: 1.8;
+    text-rendering: optimizeLegibility;
+    text-align: justify;
+}
+h2 {
+    width: 100%;
+    text-align: center;
+}
+h3, h4 {
+    margin: 0;
+}
+#outer_wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    justify-content: center;
+    
+}
+.wrapper {
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    padding: 1em 1em;
+    gap: 1em;
+    border-radius: 1em;
+    max-width: 50%;
+    
+}
+.inner_wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 0 1em;
+}
+#door_wrapper {
+    flex-direction: row;
+}
+#game_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0 1em;
+}
+.door {
+    width: 12em;
+    height: 20em;
+    display: flex;
+    
+    align-items: end;
+    justify-content: center;
+    border-radius: 1em;
+    color: yellow;
+
+    background-image: url("media/door.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.door p {
+    margin: 0;
+    font-size: 6em;
+    font-weight: 700;
+    -webkit-text-stroke: .01em black;
+}
+.door:hover {
+    cursor: default;
+}
+.available:hover {
+    cursor: pointer;
+}
+#switch_y {
+    color: green;
+}
+#switch_n {
+    color: red;
+}
+#switch_y, #switch_n:hover {
+    cursor: pointer;
+}
+.stats {
+    width: 100%;
+    padding: 1em;
+    background-color: yellow;
+    border: 2px solid black;
+    border-radius: 1em;
+}
